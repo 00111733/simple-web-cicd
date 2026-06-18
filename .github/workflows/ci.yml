@@ -117,7 +117,7 @@ jobs:
             docker-compose down || true
 
             echo "=== [4/5] 启动新容器 ==="
-            docker compose up -d
+            docker-compose up -d
 
             echo "=== [5/5] 健康检查 ==="
             sleep 3
@@ -126,12 +126,12 @@ jobs:
               echo "✅ 部署成功！HTTP: $HTTP_CODE"
             else
               echo "⚠️  返回 $HTTP_CODE，查看日志："
-              docker compose logs --tail=20
+              docker-compose logs --tail=20
             fi
 
             echo ""
             echo "=== 运行状态 ==="
-            docker compose ps
+            docker-compose ps
 
   # ============================================
   # Job 4: 通知
