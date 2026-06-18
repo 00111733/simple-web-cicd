@@ -35,12 +35,14 @@ HTML = """<!DOCTYPE html>
 <body>
     <div class="card">
         <h1>🚀 CI/CD 部署成功！</h1>
-        <p class="version">Flask App v1.0 | Python {{ python_version }}</p>
+        <p class="version">Flask App v1.0 | 学生：林怡臻 学号：2440666113 | Python {{ python_version }}</p>
         <div class="status">✅ 服务运行正常</div>
         <div class="info">
             <p><span>容器 ID：</span>{{ hostname }}</p>
             <p><span>部署时间：</span>{{ deploy_time }}</p>
             <p><span>环境：</span>{{ environment }}</p>
+            <p><span>学生：</span>林怡臻</p>
+            <p><span>学号：</span>2440666113</p>
         </div>
     </div>
 </body>
