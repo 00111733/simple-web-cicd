@@ -114,7 +114,7 @@ jobs:
             cp docker-compose.prod.yml docker-compose.yml
 
             echo "=== [3/5] 停止旧容器 ==="
-            docker compose down --remove-orphans || true
+            docker-compose down || true
 
             echo "=== [4/5] 启动新容器 ==="
             docker compose up -d
